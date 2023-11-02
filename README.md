@@ -10,6 +10,7 @@ Integrantes:
 Método de Búsqueda A* 
 
     Usar el Mapa de Rumania 2
+    <img style="float: right;" src="/img/fi.png">
     El codigo debe poder iniciar en cualquier ciudad y llegar a Bucharest  
     Debe entregar la(s) trayectoria(s) óptima(s) y su costo total
     Es opcional hacer el metodo gráfico.
