@@ -6,6 +6,7 @@ h = 1
 def visitas(objcostos, strCurrentCity, temp2, start, end):
     global visit, trajectory, globCity, h
 
+    print("==================================================== Paso "+str(h)+"  ====================================================\n")
     visit.append(strCurrentCity) #La ciudad actual se añade a la lista de visitados.
     for i in objcostos.nodes: # El ciclo sirve para recorrer la lista de los nodos que son adyacentes.
         if(i.ciudad == strCurrentCity): # Si la ciudad de la lista es la misma a la que se le está pasando en la función entra al otro ciclo for
@@ -28,14 +29,13 @@ def visitas(objcostos, strCurrentCity, temp2, start, end):
 
     print("\nCiudades visitadas", visit)
     print('Nodos y distancias finales: ', trajectory)
-    print("\n")
     h += 1
 
     globCity, min_distance = minimum() #Se regresa el valor más pequeño de la lista junto con su ciudad.
 
     for j in trajectory: # Caso contrario al anterior for se va verificando si ya llegamos a Bucharest con la ruta mas óptima. 
         if(end in str( list(j.values())[0]) and min_distance == list(j.keys())[0]):
-            print('Trayectoria: ', list(j.values())[0])
+            print('\nTrayectoria: ', list(j.values())[0])
             print('El costo total es: ', list(j.keys())[0])
             return
     
@@ -43,7 +43,7 @@ def visitas(objcostos, strCurrentCity, temp2, start, end):
     min_city = globCity.split('/')[0] # Se obtiene únicamente la ciudad de menor distancia, no toda la trayectoria.
     min_distance -= objcostos.straight_Cost.get(min_city) # Para sumar los siguientes valores se tiene que restar el costo directo, esto sirve para sumarselos a las ciudades vecinas.
 
-
+    print("\n-> Trayectoria con costo mínimo: '"+globCity+"'\n")
     visitas(objcostos, min_city, min_distance, start, end) #Se llama recursivamente la función.
 
 
