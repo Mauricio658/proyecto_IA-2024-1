@@ -24,7 +24,7 @@ def main():
     flag = False
     while(flag == False):
         print()
-        start = input('Ingresa el punto de partida: ')
+        start = input('Ingresa el punto de partida: ').capitalize()
         end = "Bucharest"
         if(start in cities):
             flag = True
