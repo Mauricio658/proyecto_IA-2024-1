@@ -16,9 +16,10 @@ def main():
     'Iasi', 'Neamt']
 
     # Imprime la lista de ciudades disponibles
-    print("\n ======= Ciudades Disponibles ======\n\n")
+    print("\n\t ****************************** Metodo de Busqueda A* usando Mapa de Rumania 2 ******************************\n")
+    print("\n\t ========================================== Ciudades Disponibles =========================================\n\n")
     print(cities)
-
+    print("\n\t ========================================================================================================\n\n")
     # Solicita al usuario que ingrese una ciudad de inicio válida
     flag = False
     while(flag == False):
@@ -84,5 +85,3 @@ def main():
 if __name__ == '__main__':
     import grafico_Rumania# mandamos el mapa para que el usuario observe la ciudad de inicio y tiene que cerrarlo para continuar
     main()
-
-   
